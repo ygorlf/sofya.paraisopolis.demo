@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.sofya-voice-form {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 550px;
+  height: 60vh;
+  padding: .75rem;
+  border-radius: 20px;
+  box-shadow: 0 0 6px #00000026;
+  background-color: #fff;
+}
+
+@media(max-width: 767px) {
+  .sofya-voice-form {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+  }
+}
+
+.sofya-form-title {
+  margin: .25rem 0 1rem 0;
+  color: #393335;
+  font: 700 1.125rem 'Open Sans', sans-serif;
+}
+
+.sofya-form-logo {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 65px;
+  height: 40px;
+  background: url('../assets/sofya-logo.svg') no-repeat top;
+  background-size: contain;
+}
+
+.sofya-form-field {
+  display: block;
+  width: 100%;
+  height: 28px;
+  margin: .75rem auto;
+  border: none;
+  border-bottom: 1px solid #DEDEDE;
+  color: #851C55;
+  font: 600 .9rem 'Open Sans', sans-serif;
+}
+
+.sofya-form-field::placeholder {
+  color: #39333559;
+  font: 600 .875rem 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+.sofya-record-button,
+.sofya-stop-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: url('../assets/mic-on.svg') no-repeat center;
+  background-size: contain;
+}
+
+.sofya-stop-button {
+  background: url('../assets/stop.svg') no-repeat center;
+}
+
+.sofya-save-button {
+  height: 32px;
+  margin-left: .5rem;
+  padding: .25rem .5rem;
+  border: 1px solid #F04922;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font: 600 .875rem 'Open Sans', sans-serif;
+  background: #F04922;
+}
+
+.sofya-form-footer {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: calc(100% - .75rem);
+  height: 3rem;
+  margin: 0 auto;
+}
+
+.sofya-equalizer-container {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+
+/* Equalizer Animation */
+.sofya-equalizer-label {
+  margin-left: .5rem;
+  color: #393335;
+  font: .9rem 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+.sofya-equalizer .bar {
+  position: relative;
+  float: left;
+  background-color: #f04922;
+  height: 10px;
+  margin-left: 4px;
+  width: 3px;
+  animation: jump 0ms -800ms linear infinite alternate;
+}
+@keyframes jump {
+  0% {
+    height: 10px;
+    top: 5px;
+ }
+  100% {
+    top: -5px;
+    height: 24px;
+ }
+}
+.sofya-equalizer .bar:nth-child(1) {
+  animation-duration: 446ms;
+}
+.sofya-equalizer .bar:nth-child(2) {
+  animation-duration: 473ms;
+}
+.sofya-equalizer .bar:nth-child(3) {
+  animation-duration: 493ms;
+}
+.sofya-equalizer .bar:nth-child(4) {
+  animation-duration: 454ms;
+}
+.sofya-equalizer .bar:nth-child(5) {
+  animation-duration: 467ms;
+}
+.sofya-equalizer .bar:nth-child(6) {
+  animation-duration: 477ms;
+}
+.sofya-equalizer .bar:nth-child(7) {
+  animation-duration: 457ms;
+}
+.sofya-equalizer .bar:nth-child(8) {
+  animation-duration: 462ms;
+}
+.sofya-equalizer .bar:nth-child(9) {
+  animation-duration: 500ms;
+}
+.sofya-equalizer .bar:nth-child(10) {
+  animation-duration: 477ms;
+}
+.sofya-equalizer .bar:nth-child(11) {
+  animation-duration: 447ms;
+}
+.sofya-equalizer .bar:nth-child(12) {
+  animation-duration: 444ms;
+}
+.sofya-equalizer .bar:nth-child(13) {
+  animation-duration: 436ms;
+}
+.sofya-equalizer .bar:nth-child(14) {
+  animation-duration: 463ms;
+}
+.sofya-equalizer .bar:nth-child(15) {
+  animation-duration: 434ms;
+}
+.sofya-equalizer .bar:nth-child(16) {
+  animation-duration: 450ms;
+}
+.sofya-equalizer .bar:nth-child(17) {
+  animation-duration: 489ms;
+}
+.sofya-equalizer .bar:nth-child(18) {
+  animation-duration: 491ms;
+}
+.sofya-equalizer .bar:nth-child(19) {
+  animation-duration: 438ms;
+}
+.sofya-equalizer .bar:nth-child(20) {
+  animation-duration: 442ms;
+}
+.sofya-equalizer.paused .bar {
+  animation-play-state: paused;
+}
